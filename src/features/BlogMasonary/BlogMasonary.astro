@@ -1,0 +1,23 @@
+---
+import MasonCard from "./_components/MasonCard.astro";
+import MasonSpotlight from "./_components/MasonSpotlight.astro";
+
+interface Props {
+  posts: any[];
+}
+const { posts } = Astro.props;
+const spotLightPost = posts[0];
+const masonPosts = posts.slice(1);
+console.log(posts);
+---
+
+<section>
+  <div class="container mx-auto flex flex-col md:flex-row gap-5 px-5 sm:px-0">
+    <div class="w-full md:w-6/12">
+      <MasonSpotlight post={spotLightPost} />
+    </div>
+    <div class="w-full md:w-6/12 grid grid-cols-1 sm:grid-cols-2 gap-5">
+      {masonPosts.map((post, index) => <MasonCard post={post} />)}
+    </div>
+  </div>
+</section>

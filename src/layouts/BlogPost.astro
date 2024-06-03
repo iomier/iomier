@@ -1,0 +1,55 @@
+---
+import BaseHead from "@components/BaseHead.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+
+import type { CollectionEntry } from "astro:content";
+import Sidebar from "@/features/SideBar/Sidebar.astro";
+import Tags from "@components/TagsSection.astro";
+
+type Props = CollectionEntry<"blog">;
+const { slug, data } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={data.title} description={data.description} />
+    <title>{data.title}</title>
+  </head>
+  <body>
+    <Header title={data.title} />
+    <main class="bg-white dark:bg-gray-700 py-4">
+      <article class="md:max-w-screen-md m-auto">
+        <div class="hero-image mb-8">
+          {
+            data.heroImage && (
+              <img
+                class="m-auto"
+                width={data.heroImage.width}
+                height={data.heroImage.height}
+                src={data.heroImage.src}
+                alt={data.title}
+              />
+            )
+          }
+        </div>
+        <div
+          id="prose"
+          class="format dark:format-invert pl-28 lg:pl-0 md:max-w-none"
+        >
+          <h1
+            id="post-title"
+            class="text-5xl md:text-6xl font-bold text-center mb-4 text-orange-500"
+          >
+            {data.title}
+          </h1>
+          <slot />
+        </div>
+        <Tags tags={data.tags} />
+      </article>
+    </main>
+    <Sidebar />
+    <Footer />
+  </body>
+</html>

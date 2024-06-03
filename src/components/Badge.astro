@@ -1,0 +1,15 @@
+---
+interface Props {
+  title: string;
+  link?: string;
+}
+const { title, link } = Astro.props;
+console.log('link',link);
+
+---
+
+<a
+  href={`/blog/tags/${link}` || "#"}
+  class="bg-blue-100 text-blue-800 text-xs font-medium px-1 pb-1 pt-1.5 rounded dark:hover:bg-orange-600 dark:bg-blue-900 dark:text-blue-300 cursor-pointer uppercase"
+  >{title}</a
+>

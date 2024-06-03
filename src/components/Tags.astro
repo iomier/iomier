@@ -1,0 +1,12 @@
+---
+import Badge from "./Badge.astro";
+
+interface Props {
+  tags: string[];
+}
+const { tags } = Astro.props;
+console.log(tags,'tags');
+
+---
+
+{tags.map((tag) => <Badge title={`#${tag}`} link={tag.toLowerCase()} />)}

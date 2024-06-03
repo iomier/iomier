@@ -1,0 +1,73 @@
+---
+import Tags from "@components/Tags.astro";
+import { Image } from "astro:assets";
+
+interface Props {
+  post: {
+    data: {
+      pubDate: Date;
+      title: string;
+      description: string;
+      tags: any[];
+      heroImage: string;
+      featured: boolean;
+      series?: string;
+    };
+    slug: string;
+  };
+}
+
+const { post } = Astro.props;
+---
+
+<div class="card relative w-fit h-fit font-work">
+  <div class="min-h-[270px] sm:min-h-[560px]">
+    <figure class="h-full max-w-full">
+      <Image
+        class="rounded-xl min-h-[270px] sm:min-h-[560px] h-full object-cover text-transparent"
+        width={560}
+        height={560}
+        alt={post.data.title}
+        decoding={"async"}
+        src={post.data.heroImage}
+      />
+    </figure>
+  </div><div
+    class="card-body gap-0 absolute bottom-0 rounded-xl w-full z-20 p-5 sm:p-8"
+  >
+    <div class="mt-4">
+      <a href={`blog/${post.slug}`}
+        ><h2
+          class="text-lg sm:text-xl line-clam-3 md:text-3xl lg:text-4xl font-semibold text-neutral-content hover:text-primary transition hover:duration-300 line-clamp-3"
+        >
+          {post.data.title}
+        </h2></a
+      >
+    </div>
+    <div class="flex items-center gap-5">
+      <p class="text-neutral-content">
+        {
+          post.data.pubDate.toLocaleString("en-GB", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          })
+        }
+      </p>
+    </div>
+    <div class="mt-0 flex flex-wrap items-center gap-1.5">
+      <Tags tags={post.data.tags} />
+    </div>
+  </div>
+  <div
+    class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-xl"
+  >
+  </div>
+  {
+    post.data.featured && (
+      <div class="absolute p-2 pr-4 top-0 right-0 text-orange-500">
+        Featured
+      </div>
+    )
+  }
+</div>
