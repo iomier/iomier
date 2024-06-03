@@ -2,7 +2,7 @@
 title: Pillars of Staff Engineering
 description: Lorem ipsum dolor sit amet
 pubDate: 2024-06-05
-heroImage: ../../assets/images/staff1.png
+heroImage: ../../assets/images/staff-engineer-pillars.png
 tags:
   - Staff_Engineer
   - blogging

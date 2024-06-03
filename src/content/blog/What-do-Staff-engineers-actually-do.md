@@ -2,7 +2,7 @@
 title: What do Staff engineers actually do?
 description: Lorem ipsum dolor sit amet
 pubDate: 2024-06-04
-heroImage: ../../assets/images/staff1.png
+heroImage: ../../assets/images/staff-engineer-pillars.png
 tags:
   - Staff_Engineer
   - blogging
@@ -17,7 +17,7 @@ Some Staff-plus engineers are explicitly hired to lead a specific area such [as 
 ## Mentorship and sponsorship
 The best way to grow those around you is by creating an active practice of mentorship and sponsorship.
 The most effective Staff engineers pair a moderate amount of mentorship with considerably more sponsorship: putting your thumb directly on the scale to help advance and support those around you.
-![local image](../../assets/images/staff1.png)
+![local image](../../assets/images/staff-engineer-sponsership.png)
 > In mentorship, the link to getting promoted and receiving developmental assignments has weakened, while sponsoring involves advocating for someone to be promoted and ensuring they receive important assignments.
 ## Providing engineering perspective
 Companies often struggle when an unexpected decision shows up. The sort which is both time-sensitive and important, and it’s challenging to even pull the right folks together before the decision needs to get made. It’s frequent for [an organizational restructure](https://lethain.com/running-an-engineering-reorg/) to occur without valuable input that would have changed the outcome.

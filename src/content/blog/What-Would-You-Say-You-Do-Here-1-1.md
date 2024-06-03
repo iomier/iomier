@@ -2,7 +2,7 @@
 title: What Would You Say You Do Here
 description: Lorem ipsum dolor sit amet
 pubDate: 2024-06-08
-heroImage: ../../assets/images/staff1.png
+heroImage: ../../assets/images/staff-engineer-pillars.png
 tags:
   - blogging
   - Staff_Engineer

@@ -17,6 +17,7 @@
     "typescript": "^5.4.5"
   },
   "devDependencies": {
-    "flowbite-typography": "^1.0.3"
+    "flowbite-typography": "^1.0.3",
+    "sharp": "^0.33.4"
   }
 }

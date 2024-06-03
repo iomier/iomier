@@ -2,7 +2,7 @@
 title: Staff Engineer Archetypes
 description: The four common archetypes of Staff-plus role
 pubDate: 2024-06-03
-heroImage: ../../assets/images/staff1.png
+heroImage: ../../assets/images/staff-engineer-pillars.png
 tags:
   - blogging
   - Staff_Engineer
